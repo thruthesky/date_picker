@@ -58,6 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
               onChanged: (year, month, day) => print('$year, $month, $day'),
             ),
             const SizedBox(height: 24.0),
+            DatePicker(
+              beginYear: 2020,
+              endYear: 2029,
+              ascendingYear: false,
+              initialDate: (year: 2023, month: null, day: null),
+              onChanged: (year, month, day) => print('$year, $month, $day'),
+            ),
+            const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
                 showDialog(

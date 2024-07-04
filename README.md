@@ -16,6 +16,8 @@ A simple and easy to use date-picker widget.
 |lableYear| ... |
 |lableMonth| ... |
 |lableDay| ... |
+|initialDate| You can set initial date by using this property. ( initial year can only be within the range of beginYear and endYear).|
+
 
 
 
@@ -48,6 +50,23 @@ class _MyHomePageState extends State<MyHomePage> {
               beginYear: 2020,
               endYear: 2029,
               ascendingYear: false,
+              onChanged: (year, month, day) => print('$year, $month, $day'),
+            ),
+            const SizedBox(height: 24.0),
+             DatePicker(
+              beginYear: 2020,
+              endYear: 2029,
+              ascendingYear: false,
+              initialDate: (year: 2025, month: 11, day: 17),
+              onChanged: (year, month, day) => print('$year, $month, $day'),
+            ),
+            const SizedBox(height: 24.0),
+              const SizedBox(height: 24.0),
+             DatePicker(
+              beginYear: 2020,
+              endYear: 2029,
+              ascendingYear: false,
+              initialDate: (year: 2025, month: null, day: null),
               onChanged: (year, month, day) => print('$year, $month, $day'),
             ),
             const SizedBox(height: 24.0),
