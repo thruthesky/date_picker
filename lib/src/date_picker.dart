@@ -15,6 +15,10 @@ import 'package:flutter/material.dart';
 /// The [ascendingYear] property can be used to specify whether the years should
 /// be displayed in ascending order. By default, the years are displayed in
 /// ascending order.
+///
+/// The [initialDate] property can be used to specify the initial date that the
+/// user should be able to select. If this property is not provided, the initial
+/// date will be]
 class DatePicker extends StatefulWidget {
   const DatePicker({
     super.key,
@@ -25,6 +29,7 @@ class DatePicker extends StatefulWidget {
     this.labelYear = 'Year',
     this.labelMonth = 'Month',
     this.labelDay = 'Day',
+    this.initialDate,
   });
 
   final int? beginYear;
@@ -35,6 +40,7 @@ class DatePicker extends StatefulWidget {
   final String labelYear;
   final String labelMonth;
   final String labelDay;
+  final ({int? year, int? month, int? day})? initialDate;
 
   @override
   State<DatePicker> createState() => _DatePickerState();
@@ -53,6 +59,16 @@ class _DatePickerState extends State<DatePicker> {
     beginYear = widget.beginYear ?? DateTime.now().year;
     endYear = widget.endYear ?? DateTime.now().year + 16;
     year = widget.ascendingYear ? beginYear : endYear;
+
+    prepareInitialData();
+  }
+
+  void prepareInitialData() {
+    if (widget.initialDate != null) {
+      year = widget.initialDate!.year ?? year;
+      month = widget.initialDate!.month ?? month;
+      day = widget.initialDate!.day ?? day;
+    }
   }
 
   @override
