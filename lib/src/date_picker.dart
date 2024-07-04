@@ -17,8 +17,9 @@ import 'package:flutter/material.dart';
 /// ascending order.
 ///
 /// The [initialDate] property can be used to specify the initial date that the
-/// user should be able to select. If this property is not provided, the initial
-/// date will be]
+/// user should be displaying on initialization (ex. geting data from database).
+/// If this property is not provided, the initial will display the default value
+/// on first load.
 class DatePicker extends StatefulWidget {
   const DatePicker({
     super.key,
