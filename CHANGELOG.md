@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Update documents
+
 ## 0.0.2
 
 * First version of date picker
