@@ -1,6 +1,6 @@
 name: date_picker_v2
 description: "A simple and easy to use date-picker widget"
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/thruthesky/date_picker
 
 environment:
