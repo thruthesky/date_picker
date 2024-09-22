@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Add. initialDate
+
 ## 0.0.3
 
 * Update documents
